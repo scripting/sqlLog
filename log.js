@@ -1,8 +1,12 @@
-const myVersion = "0.4.0", myProductName = "sqlLog"; 
+const myVersion = "0.4.2", myProductName = "sqlLog"; 
 
 exports.addToLog = addToLog; 
 exports.getRecentLogItems = getRecentLogItems; 
 exports.start = start; 
+
+const fs = require ("fs");
+const utils = require ("daveutils"); 
+const davesql = require ("davesql"); 
 
 var config = {
 	maxFeedItems: 100
@@ -26,7 +30,6 @@ function addToLog (eventName, err, eventData, callback) { //12/7/24 by DW
 				}
 			}
 		else {
-			rssChanged (); //12/10/24 by DW
 			if (callback !== undefined) {
 				callback (undefined, theLogItem);
 				}
