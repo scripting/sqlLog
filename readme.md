@@ -4,5 +4,5 @@ Builds on davesql package, adds a very simple log table to your database, and pr
 
 ### The log table
 
-<code class="woRuntimeErrorMessage">Can’t evaluate the expression because the name “objects” hasn’t been defined.</code>
+```SQLcreate table log (	id int auto_increment primary key, 	eventName varchar (255) not null default '',	eventError varchar (1023) not null default '',	eventData json,	whenCreated datetime not null default current_timestamp	);```
 
