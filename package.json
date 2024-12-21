@@ -1,0 +1,16 @@
+{
+	"name": "sqllog",
+	"description": "Implements a log table for an SQL app.",
+	"author": "Dave Winer <dave@scripting.com>",
+	"version": "0.4.0",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/scripting/xxx.git"
+		},
+	"main": "log.js",
+	"dependencies" : {
+		"daveutils": "*",
+		"davesql": "*"
+		} 
+	}
