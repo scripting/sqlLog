@@ -10,7 +10,19 @@ Builds on davesql package, adds a very simple log table to your database, and pr
 
 ```SQL
 
-select id, eventData, date_format(whenCreated, '%h:%i%p') as 'when' from log where eventName = 'connect' order by id desc limit 20;
+SELECT id,
+
+eventData,
+
+DATE_FORMAT(whenCreated, '%h:%i%p') AS 'when'
+
+FROM log
+
+WHERE eventName = 'connect'
+
+ORDER BY id DESC
+
+LIMIT 20;
 
 ```
 
